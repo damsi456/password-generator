@@ -92,13 +92,14 @@ const characters = [
   "/",
 ];
 
-let generatePwdBtn = document.getElementById("generate-pwd-btn");
-let firstPassword = document.getElementById("first-password");
-let secondPassword = document.getElementById("second-password");
+const pwdLengthEl = document.getElementById("pwd-length");
+const generatePwdBtn = document.getElementById("generate-pwd-btn");
+const firstPassword = document.getElementById("first-password");
+const secondPassword = document.getElementById("second-password");
 
 function generateAPassword() {
   let password = "";
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < parseInt(pwdLengthEl.value, 10); i++) {
     const randomIndex = Math.floor(Math.random() * characters.length);
     password += characters[randomIndex];
   }

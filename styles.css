@@ -49,6 +49,22 @@ h1 > span {
   margin-bottom: 50px;
 }
 
+#pwd-length {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  padding: 9px 18px;
+  font-family: Inter, "sans-serif";
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#pwd-length:focus {
+  outline: none;
+  outline: 2px solid #0c8e63;
+}
+
 #generate-pwd-btn {
   padding: 10px 16px;
   background: #10b981;
