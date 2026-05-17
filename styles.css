@@ -20,12 +20,14 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   background: #1f2937;
 }
 
 .main-container {
   margin: 0 50px;
   width: 100%;
+  max-width: 700px;
 }
 
 h1 {
