@@ -93,7 +93,7 @@ hr {
   gap: 25px;
 }
 
-.result-container > div {
+.password-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,9 +104,10 @@ hr {
   width: 100%;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 }
 
-.result-container > div > p {
+.password-btn > p {
   font-family: Inter, "sans-serif";
   font-weight: 500;
   color: #55f991;

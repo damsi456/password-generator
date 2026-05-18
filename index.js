@@ -96,6 +96,8 @@ const pwdLengthEl = document.getElementById("pwd-length");
 const generatePwdBtn = document.getElementById("generate-pwd-btn");
 const firstPassword = document.getElementById("first-password");
 const secondPassword = document.getElementById("second-password");
+const copyFirstPasswordBtn = document.getElementsByClassName("password-btn")[0];
+const copySecondPasswordBtn = document.getElementsByClassName("password-btn")[1];
 
 function generateAPassword() {
   let password = "";
@@ -106,7 +108,26 @@ function generateAPassword() {
   return password;
 }
 
+async function copyPassword(passwordEl) {
+  const passwordText = passwordEl.innerText;
+
+  try {
+    await navigator.clipboard.writeText(passwordText);
+    alert("Password copied to the clipboard!");
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+  }
+}
+
 generatePwdBtn.addEventListener("click", () => {
   firstPassword.textContent = generateAPassword();
   secondPassword.textContent = generateAPassword();
+});
+
+copyFirstPasswordBtn.addEventListener("click", () => {
+  copyPassword(firstPassword);
+});
+
+copySecondPasswordBtn.addEventListener("click", () => {
+  copyPassword(secondPassword);
 });
